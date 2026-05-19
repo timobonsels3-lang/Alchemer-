@@ -1,0 +1,1230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =========================================================
+   FORTLANE COLOURS & ROOT VARIABLES
+   ========================================================= */
+
+:root {
+  --fortlane-blue: #003D52;
+  --fortlane-green: #AAD228;
+  --fortlane-light-blue: #CADBE8;
+  --fortlane-soft-bg: #F2F5F7;
+  --fortlane-line: rgba(0, 61, 82, 0.16);
+  --fortlane-content: 640px;
+  --fortlane-canvas: 760px;
+  --fortlane-rail: 54px;
+}
+
+/* =========================================================
+   BASE / UNIVERSAL STYLES
+   ========================================================= */
+
+* {
+  font-family: 'Inter', sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100% !important;
+  overflow-x: hidden !important;
+  background: #FFFFFF !important;
+  color: var(--fortlane-blue) !important;
+}
+
+body {
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+/* =========================================================
+   HIDE ALCHEMER DEFAULT ELEMENTS
+   ========================================================= */
+
+.sg-progress-bar,
+.sg-powered-by,
+.sg-cm-right,
+.sg-footer,
+.sg-footer-content {
+  display: none !important;
+}
+
+/* =========================================================
+   CANVAS WITH NARROW DARK BLUE SIDE RAILS (DESKTOP)
+   ========================================================= */
+
+.sg-survey {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #FFFFFF !important;
+}
+
+.sg-wrapper {
+  width: var(--fortlane-canvas) !important;
+  max-width: var(--fortlane-canvas) !important;
+  min-height: 100vh !important;
+  margin: 0 auto !important;
+  background: #FFFFFF !important;
+  box-shadow:
+    calc(-1 * var(--fortlane-rail)) 0 0 var(--fortlane-blue),
+    var(--fortlane-rail) 0 0 var(--fortlane-blue) !important;
+  overflow: visible !important;
+}
+
+.sg-content {
+  width: 100% !important;
+  max-width: var(--fortlane-canvas) !important;
+  min-height: calc(100vh - 64px) !important;
+  margin: 0 auto !important;
+  padding: 24px 60px 42px !important;
+  background: #FFFFFF !important;
+  color: var(--fortlane-blue) !important;
+  overflow-x: visible !important;
+}
+
+/* =========================================================
+   HEADER / LOGO
+   ========================================================= */
+
+.sg-header {
+  width: 100% !important;
+  max-width: var(--fortlane-canvas) !important;
+  margin: 0 auto !important;
+  padding: 14px 38px 8px 0 !important;
+  background: #FFFFFF !important;
+  text-align: right !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.sg-header-hook-1,
+.sg-header-hook-2 {
+  display: none !important;
+}
+
+.sg-header-image,
+img.sg-header-image,
+.sg-logo,
+img.sg-logo {
+  display: inline-block !important;
+  max-width: 176px !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+.sg-title {
+  display: none !important;
+}
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.sg-page-title {
+  color: var(--fortlane-green) !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+  margin: 14px auto 28px !important;
+  padding: 0 !important;
+  max-width: var(--fortlane-content) !important;
+}
+
+/* =========================================================
+   PAGE DESCRIPTION / INTRO BLOCKS
+   ========================================================= */
+
+.sg-page-description,
+.sg-instructions,
+.sg-question.sg-type-instruction {
+  width: 100% !important;
+  max-width: var(--fortlane-content) !important;
+  margin: 0 auto 28px !important;
+  padding: 0 !important;
+  color: var(--fortlane-blue) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  text-align: left !important;
+  overflow-wrap: break-word !important;
+}
+
+.sg-page-description:not(:empty),
+.sg-instructions:not(:empty) {
+  background: var(--fortlane-soft-bg) !important;
+  border-radius: 4px !important;
+  padding: 18px 20px !important;
+}
+
+.sg-page-description p,
+.sg-instructions p,
+.sg-question.sg-type-instruction p {
+  margin: 0 0 12px !important;
+  color: var(--fortlane-blue) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+}
+
+.sg-page-description strong,
+.sg-instructions strong,
+.sg-question.sg-type-instruction strong,
+.sg-page-description b,
+.sg-instructions b,
+.sg-question.sg-type-instruction b {
+  color: var(--fortlane-blue) !important;
+  font-weight: 700 !important;
+}
+
+.sg-page-description ol,
+.sg-instructions ol,
+.sg-question.sg-type-instruction ol {
+  margin: 4px 0 12px 24px !important;
+  padding-left: 18px !important;
+}
+
+.sg-page-description li,
+.sg-instructions li,
+.sg-question.sg-type-instruction li {
+  margin: 0 0 3px !important;
+  padding-left: 4px !important;
+  color: var(--fortlane-blue) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.45 !important;
+}
+
+/* =========================================================
+   QUESTIONS GENERAL
+   ========================================================= */
+
+.sg-question {
+  width: 100% !important;
+  max-width: var(--fortlane-content) !important;
+  margin: 0 auto 18px !important;
+  padding: 0 0 18px !important;
+  border-bottom: 1px solid var(--fortlane-line) !important;
+  color: var(--fortlane-blue) !important;
+  text-align: left !important;
+}
+
+.sg-question:last-of-type {
+  border-bottom: none !important;
+}
+
+.sg-question-title,
+.sg-question-text {
+  display: block !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  color: var(--fortlane-blue) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1.42 !important;
+  text-align: left !important;
+  overflow-wrap: break-word !important;
+}
+
+.sg-question-title label,
+.sg-question-title span:not(.sg-screenreader-only),
+.sg-question-text label,
+.sg-question-text span:not(.sg-screenreader-only) {
+  color: var(--fortlane-blue) !important;
+  font-weight: 700 !important;
+}
+
+.sg-question-number {
+  display: inline !important;
+  margin-right: 4px !important;
+  color: var(--fortlane-blue) !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+.sg-required-icon {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin-left: 4px !important;
+  color: #AB2238 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+/* Hide Alchemer helper text */
+.sg-screenreader-only,
+.sg-question-required,
+.sg-required-text,
+.sg-error-message,
+.sg-question-errorlist,
+.sg-error,
+.sg-error-icon,
+.sg-error-display,
+.sg-validation-error,
+.sg-question-title .sg-screenreader-only,
+.sg-required-icon .sg-screenreader-only {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Normal answer text */
+.sg-question-options,
+.sg-question-options label,
+.sg-option-label,
+.sg-question table td,
+.sg-question table th,
+.sg-question input,
+.sg-question textarea {
+  color: var(--fortlane-blue) !important;
+  font-weight: 400 !important;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: var(--fortlane-green) !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+
+/* =========================================================
+   RADIO / CHECKBOX QUESTIONS
+   ========================================================= */
+
+.sg-question-options {
+  width: 100% !important;
+  max-width: var(--fortlane-content) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.sg-question-options ul,
+.sg-question-options li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.sg-question-options label {
+  color: var(--fortlane-blue) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+}
+
+.sg-question-options input[type="radio"],
+.sg-question-options input[type="checkbox"] {
+  margin-right: 8px !important;
+  accent-color: var(--fortlane-blue) !important;
+}
+
+.sg-type-radio .sg-question-options li,
+.sg-question.sg-type-radio .sg-question-options li {
+  margin-bottom: 7px !important;
+}
+
+/* Remove excessive default option spacing */
+.sg-question-options > div,
+.sg-question-options > span {
+  margin-top: 0 !important;
+}
+
+/* =========================================================
+   MATRIX / TABLE QUESTIONS (DESKTOP)
+   ========================================================= */
+
+.sg-type-table,
+.sg-type-table-radio,
+.sg-question-table,
+.sg-question table {
+  width: 100% !important;
+  max-width: var(--fortlane-content) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.sg-question table,
+.sg-type-table table,
+.sg-type-table-radio table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  margin-top: 6px !important;
+  color: var(--fortlane-blue) !important;
+}
+
+.sg-type-table-radio .sg-question-options,
+.sg-type-table .sg-question-options {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.sg-question table th,
+.sg-question table td,
+.sg-type-table th,
+.sg-type-table td,
+.sg-type-table-radio th,
+.sg-type-table-radio td {
+  padding: 7px 5px !important;
+  color: var(--fortlane-blue) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.22 !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.sg-question table th,
+.sg-type-table th,
+.sg-type-table-radio th {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.15 !important;
+}
+
+.sg-question table th:first-child,
+.sg-question table td:first-child,
+.sg-type-table th:first-child,
+.sg-type-table td:first-child,
+.sg-type-table-radio th:first-child,
+.sg-type-table-radio td:first-child {
+  width: 31% !important;
+  text-align: left !important;
+  padding-left: 6px !important;
+  padding-right: 10px !important;
+}
+
+.sg-question table tr:nth-child(even) td,
+.sg-type-table tr:nth-child(even) td,
+.sg-type-table-radio tr:nth-child(even) td {
+  background-color: rgba(202, 219, 232, 0.30) !important;
+}
+
+.sg-question table input[type="radio"],
+.sg-type-table input[type="radio"],
+.sg-type-table-radio input[type="radio"] {
+  margin: 0 auto !important;
+  accent-color: var(--fortlane-blue) !important;
+}
+
+/* Relevance scale single questions */
+.fortlane-relevance-scale {
+  margin-bottom: 18px !important;
+  padding-bottom: 16px !important;
+}
+
+.fortlane-relevance-scale .sg-question-title,
+.fortlane-relevance-scale .sg-question-text {
+  margin-bottom: 6px !important;
+}
+
+.fortlane-relevance-scale table {
+  margin-top: 0 !important;
+  table-layout: fixed !important;
+}
+
+.fortlane-relevance-scale table th:first-child,
+.fortlane-relevance-scale table td:first-child {
+  display: none !important;
+}
+
+.fortlane-relevance-scale table th,
+.fortlane-relevance-scale table td {
+  width: 16.66% !important;
+  padding: 6px 4px !important;
+  text-align: center !important;
+}
+
+.fortlane-relevance-scale table th {
+  font-size: 11.5px !important;
+  line-height: 1.15 !important;
+  font-weight: 500 !important;
+  padding-bottom: 6px !important;
+}
+
+.fortlane-relevance-scale table td {
+  padding-top: 4px !important;
+  padding-bottom: 7px !important;
+}
+
+.fortlane-relevance-scale table tr:nth-child(even) td {
+  background-color: transparent !important;
+}
+
+/* =========================================================
+   TEXT INPUTS / OPEN QUESTIONS
+   ========================================================= */
+
+.sg-content input[type="email"],
+.sg-content input[type="text"],
+.sg-content input[type="tel"],
+.sg-content input[type="url"],
+.sg-content input[type="number"],
+.sg-content textarea,
+.sg-content select {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 42px !important;
+  margin: 8px 0 0 !important;
+  padding: 10px 12px !important;
+  border: 1px solid rgba(0, 61, 82, 0.35) !important;
+  border-radius: 4px !important;
+  background-color: #FFFFFF !important;
+  color: var(--fortlane-blue) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  box-shadow: none !important;
+  appearance: none !important;
+}
+
+.sg-content textarea {
+  min-height: 100px !important;
+  resize: vertical !important;
+}
+
+.sg-question.sg-type-essay textarea,
+.sg-question.sg-type-textbox input[type="text"],
+.sg-question textarea,
+.sg-question input[type="text"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.sg-content input:focus,
+.sg-content textarea:focus,
+.sg-content select:focus {
+  outline: none !important;
+  border-color: var(--fortlane-green) !important;
+  box-shadow: 0 0 0 3px rgba(170, 210, 40, 0.22) !important;
+}
+
+/* Character counter aligned with textbox */
+.sg-character-counter,
+.sg-counter,
+.sg-minmax-characters,
+.sg-input-counter,
+.sg-question .sg-help-text {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 4px 0 0 !important;
+  color: rgba(0, 61, 82, 0.65) !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  text-align: left !important;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.sg-button-bar {
+  display: flex !important;
+  gap: 14px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: var(--fortlane-content) !important;
+  margin: 18px auto 0 !important;
+  padding: 0 !important;
+  flex-direction: row !important;
+}
+
+.sg-button,
+.custom-email-button {
+  flex: 1 1 0 !important;
+  padding: 12px 22px !important;
+  border: 2px solid var(--fortlane-green) !important;
+  border-radius: 4px !important;
+  background-color: var(--fortlane-green) !important;
+  color: var(--fortlane-blue) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(0, 61, 82, 0.14) !important;
+  white-space: nowrap !important;
+}
+
+.custom-email-button {
+  display: block !important;
+  width: auto !important;
+  min-width: 160px !important;
+  max-width: 260px !important;
+  margin: 14px auto 0 !important;
+  flex: 0 0 auto !important;
+}
+
+.sg-button:hover,
+.custom-email-button:hover {
+  background-color: var(--fortlane-blue) !important;
+  border-color: var(--fortlane-blue) !important;
+  color: #FFFFFF !important;
+}
+
+/* =========================================================
+   PRIVACY / GDPR
+   ========================================================= */
+
+.sg-gdpr-confirm {
+  position: static !important;
+  width: 100% !important;
+  max-width: var(--fortlane-content) !important;
+  margin: 16px auto 10px !important;
+  padding: 8px 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: var(--fortlane-blue) !important;
+  text-align: center !important;
+}
+
+.sg-gdpr-confirm label {
+  color: var(--fortlane-blue) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+}
+
+.sg-gdpr-confirm input[type="checkbox"] {
+  margin-right: 6px !important;
+  accent-color: var(--fortlane-green) !important;
+}
+
+.sg-gdpr-confirm a {
+  color: var(--fortlane-green) !important;
+  font-weight: 500 !important;
+}
+
+/* =========================================================
+   PRIVACY MODAL / LIGHTBOX
+   ========================================================= */
+
+.sg-modal,
+.sg-modal-dialog,
+.sg-lightbox,
+.sg-popup,
+.sg-overlay,
+[role="dialog"] {
+  color: var(--fortlane-blue) !important;
+}
+
+.sg-modal-dialog,
+.sg-lightbox,
+.sg-popup,
+[role="dialog"] {
+  background: #FFFFFF !important;
+  border-radius: 4px !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.30) !important;
+}
+
+.sg-modal h1,
+.sg-lightbox h1,
+.sg-popup h1,
+[role="dialog"] h1 {
+  color: var(--fortlane-blue) !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 22px !important;
+}
+
+.sg-modal h2,
+.sg-modal h3,
+.sg-lightbox h2,
+.sg-lightbox h3,
+.sg-popup h2,
+.sg-popup h3,
+[role="dialog"] h2,
+[role="dialog"] h3 {
+  color: var(--fortlane-blue) !important;
+  font-weight: 700 !important;
+}
+
+.sg-modal p,
+.sg-lightbox p,
+.sg-popup p,
+[role="dialog"] p {
+  color: var(--fortlane-blue) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+}
+
+.sg-modal strong,
+.sg-lightbox strong,
+.sg-popup strong,
+[role="dialog"] strong,
+.sg-modal b,
+.sg-lightbox b,
+.sg-popup b,
+[role="dialog"] b {
+  color: var(--fortlane-blue) !important;
+  font-weight: 700 !important;
+}
+
+.sg-modal a,
+.sg-lightbox a,
+.sg-popup a,
+[role="dialog"] a {
+  color: var(--fortlane-green) !important;
+}
+
+/* =========================================================
+   TABLET (769px - 1024px)
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --fortlane-canvas: 760px;
+    --fortlane-content: 640px;
+    --fortlane-rail: 46px;
+  }
+
+  .sg-wrapper {
+    width: var(--fortlane-canvas) !important;
+    max-width: calc(100vw - 120px) !important;
+  }
+
+  .sg-content {
+    padding: 22px 50px 38px !important;
+  }
+
+  .sg-header {
+    padding: 12px 34px 8px 0 !important;
+  }
+
+  .sg-header-image,
+  img.sg-header-image,
+  .sg-logo,
+  img.sg-logo {
+    max-width: 150px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE - PORTRAIT (max 768px, vertical/narrow)
+   ========================================================= */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+  html,
+  body,
+  .sg-survey {
+    width: 100% !important;
+    background: #FFFFFF !important;
+    overflow-x: hidden !important;
+  }
+
+  .sg-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+  }
+
+  .sg-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 16px 20px 80px !important;
+    background: #FFFFFF !important;
+  }
+
+  /* HEADER */
+  .sg-header {
+    width: 100% !important;
+    padding: 10px 20px 8px 0 !important;
+    text-align: right !important;
+  }
+
+  .sg-header-image,
+  img.sg-header-image,
+  .sg-logo,
+  img.sg-logo {
+    max-width: 120px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* PAGE TITLE */
+  .sg-page-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    margin: 12px 0 20px !important;
+    text-align: center !important;
+    color: var(--fortlane-green) !important;
+    font-weight: 700 !important;
+  }
+
+  /* DESCRIPTION */
+  .sg-page-description,
+  .sg-instructions,
+  .sg-question.sg-type-instruction {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 20px !important;
+    padding: 14px 16px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* QUESTIONS */
+  .sg-question {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 18px !important;
+    padding: 0 0 18px !important;
+    border-bottom: 1px solid rgba(0, 61, 82, 0.16) !important;
+  }
+
+  .sg-question-title,
+  .sg-question-text {
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+    margin: 0 0 12px !important;
+    color: var(--fortlane-blue) !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+  }
+
+  .sg-question-number {
+    font-size: inherit !important;
+    font-weight: 700 !important;
+    margin-right: 4px !important;
+  }
+
+  .sg-required-icon {
+    color: #AB2238 !important;
+    font-size: 15px !important;
+    margin-left: 3px !important;
+  }
+
+  /* RADIO QUESTIONS - MOBILE OPTIMIZED BOXES */
+  .sg-question-options,
+  .sg-mobile-optimized .sg-question-options {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .sg-question-options ul,
+  .sg-question-options li {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .sg-mobile-optimized .sg-question.sg-type-radio .sg-question-options label,
+  .sg-question.sg-type-radio .sg-question-options label,
+  .sg-question-options label,
+  .sg-question-options .sg-mobilize-label label,
+  body .sg-question-options label,
+  body .sg-mobile-optimized .sg-question-options label {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 44px !important;
+    padding: 11px 14px !important;
+    margin: 0 0 8px !important;
+    border: 1px solid rgba(0, 61, 82, 0.28) !important;
+    border-radius: 8px !important;
+    background: #FFFFFF !important;
+    color: var(--fortlane-blue) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  .sg-question .sg-question-options input[type="radio"]:checked + label,
+  .sg-question .sg-question-options input[type="radio"]:checked + .sg-mobilize-label label,
+  .sg-mobile-optimized .sg-question .sg-question-options input[type="radio"]:checked + label,
+  .sg-mobile-optimized .sg-question .sg-question-options input[type="radio"]:checked + .sg-mobilize-label label {
+    background: var(--fortlane-light-blue) !important;
+    border-color: var(--fortlane-blue) !important;
+    color: var(--fortlane-blue) !important;
+  }
+
+  /* MATRIX QUESTIONS - VERTICAL MOBILE BOXES */
+  .sg-question table,
+  .sg-question table thead,
+  .sg-question table tbody,
+  .sg-question table tr,
+  .sg-question table th,
+  .sg-question table td {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .sg-question table {
+    margin: 0 !important;
+    border-collapse: separate !important;
+    table-layout: auto !important;
+  }
+
+  .sg-question table th {
+    display: none !important;
+  }
+
+  .sg-question table tr {
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .sg-question table tr:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Die Frage (erste Spalte) */
+  .sg-question table td:first-child {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 0 12px 0 !important;
+    margin: 0 0 12px 0 !important;
+    background: transparent !important;
+    color: var(--fortlane-blue) !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    border-bottom: 1px solid rgba(0, 61, 82, 0.18) !important;
+  }
+
+  /* Die Antwort-Optionen */
+  .sg-question table td:not(:first-child) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 44px !important;
+    padding: 11px 14px !important;
+    margin: 0 0 8px 0 !important;
+    border: 1px solid rgba(0, 61, 82, 0.28) !important;
+    border-radius: 8px !important;
+    background: #FFFFFF !important;
+    color: var(--fortlane-blue) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    position: relative !important;
+  }
+
+  /* Radio Button positioning */
+  .sg-question table input[type="radio"] {
+    position: absolute !important;
+    left: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+  }
+
+  /* Label padding for radio button */
+  .sg-question table label,
+  .sg-question table .sg-mobilize-label,
+  .sg-question table .sg-mobilize-label label {
+    display: inline !important;
+    padding-left: 24px !important;
+    margin: 0 !important;
+  }
+
+  /* Checked state */
+  .sg-question table input[type="radio"]:checked + label,
+  .sg-question table input[type="radio"]:checked + .sg-mobilize-label label {
+    color: var(--fortlane-blue) !important;
+  }
+
+  .sg-question table tr:has(input[type="radio"]:checked) td:not(:first-child) {
+    background: var(--fortlane-light-blue) !important;
+    border-color: var(--fortlane-blue) !important;
+  }
+
+  /* TEXT INPUTS */
+  .sg-content input[type="email"],
+  .sg-content input[type="text"],
+  .sg-content input[type="tel"],
+  .sg-content input[type="url"],
+  .sg-content input[type="number"],
+  .sg-content textarea,
+  .sg-content select {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 42px !important;
+    margin: 8px 0 0 !important;
+    padding: 10px 12px !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    color: var(--fortlane-blue) !important;
+    border: 1px solid rgba(0, 61, 82, 0.35) !important;
+    border-radius: 4px !important;
+    background: #FFFFFF !important;
+  }
+
+  .sg-content textarea {
+    min-height: 90px !important;
+  }
+
+  /* BUTTONS - MOBILE STACKED */
+  .sg-button-bar {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+    margin-top: 16px !important;
+  }
+
+  .sg-button,
+  .custom-email-button,
+  input.sg-button,
+  button.sg-button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 46px !important;
+    padding: 11px 16px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    color: var(--fortlane-blue) !important;
+    background: var(--fortlane-green) !important;
+    border: 2px solid var(--fortlane-green) !important;
+    border-radius: 4px !important;
+    white-space: nowrap !important;
+    flex: 0 !important;
+  }
+
+  /* GDPR - MOBILE EMAIL PAGE */
+  body.fortlane-email-page {
+    --gdpr-fixed-space: 88px;
+  }
+
+  body.fortlane-email-page .sg-content {
+    padding-bottom: calc(var(--gdpr-fixed-space) + env(safe-area-inset-bottom)) !important;
+  }
+
+  body.fortlane-email-page .sg-gdpr-confirm {
+    position: fixed !important;
+    left: 4px !important;
+    right: 4px !important;
+    bottom: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom)) !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 61, 82, 0.18) !important;
+    border-top: 4px solid var(--fortlane-green) !important;
+    border-radius: 12px 12px 0 0 !important;
+    box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.14) !important;
+    z-index: 99999 !important;
+    text-align: left !important;
+  }
+
+  body.fortlane-email-page .sg-gdpr-confirm label {
+    display: block !important;
+    position: relative !important;
+    padding-left: 28px !important;
+    margin: 0 !important;
+    color: var(--fortlane-blue) !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.22 !important;
+    text-align: left !important;
+  }
+
+  body.fortlane-email-page .sg-gdpr-confirm input[type="checkbox"] {
+    position: absolute !important;
+    left: 0 !important;
+    top: 2px !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    accent-color: var(--fortlane-green) !important;
+  }
+
+  body.fortlane-email-page .sg-gdpr-confirm a {
+    color: var(--fortlane-green) !important;
+    text-decoration: underline !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* =========================================================
+   MOBILE - LANDSCAPE (max 768px, horizontal/wide)
+   ========================================================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+  html,
+  body,
+  .sg-survey {
+    width: 100% !important;
+    background: #FFFFFF !important;
+    overflow-x: hidden !important;
+  }
+
+  .sg-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+  }
+
+  .sg-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 18px 24px 60px !important;
+    background: #FFFFFF !important;
+  }
+
+  .sg-header {
+    width: 100% !important;
+    padding: 10px 24px 8px 0 !important;
+    text-align: right !important;
+  }
+
+  .sg-header-image,
+  img.sg-header-image,
+  .sg-logo,
+  img.sg-logo {
+    max-width: 110px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .sg-page-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    margin: 10px 0 18px !important;
+    text-align: center !important;
+    color: var(--fortlane-green) !important;
+    font-weight: 700 !important;
+  }
+
+  .sg-page-description,
+  .sg-instructions,
+  .sg-question.sg-type-instruction {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 18px !important;
+    padding: 16px 18px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  .sg-question {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 20px !important;
+    padding: 0 0 20px !important;
+    border-bottom: 1px solid rgba(0, 61, 82, 0.16) !important;
+  }
+
+  .sg-question-title,
+  .sg-question-text {
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+    margin: 0 0 14px !important;
+    color: var(--fortlane-blue) !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+  }
+
+  /* RADIO / MATRIX - MOBILE LANDSCAPE */
+  .sg-question-options label,
+  .sg-question table td:not(:first-child) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 50px !important;
+    padding: 14px 18px !important;
+    margin: 0 0 12px !important;
+    border: 1px solid rgba(0, 61, 82, 0.28) !important;
+    border-radius: 10px !important;
+    background: #FFFFFF !important;
+    color: var(--fortlane-blue) !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+
+  .sg-question .sg-question-options input[type="radio"]:checked + label,
+  .sg-question table tr:has(input[type="radio"]:checked) td:not(:first-child) {
+    background: var(--fortlane-light-blue) !important;
+    border-color: var(--fortlane-blue) !important;
+    color: var(--fortlane-blue) !important;
+  }
+
+  /* BUTTONS - MOBILE LANDSCAPE HORIZONTAL */
+  .sg-button-bar {
+    flex-direction: row !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 12px !important;
+    margin-top: 18px !important;
+  }
+
+  .sg-button,
+  .custom-email-button,
+  input.sg-button,
+  button.sg-button {
+    flex: 1 1 0 !important;
+    min-height: 50px !important;
+    padding: 13px 20px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    color: var(--fortlane-blue) !important;
+    background: var(--fortlane-green) !important;
+    border: 2px solid var(--fortlane-green) !important;
+    border-radius: 4px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* FIX - MOBILE OPTIMIZED CELL */
+.sg-mobile-optimized .sg-cell {
+  width: 100% !important;
+}
